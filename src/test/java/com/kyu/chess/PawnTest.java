@@ -17,7 +17,7 @@ class PawnTest {
     @Test
     @DisplayName("원하는 색상으로 폰을 만든다.")
     void createWithColor() {
-        String color = "white";
+        String color = PieceColor.WHITE.getColor();
         Pawn pawn = new Pawn(color);
         verify(pawn, color);
     }
