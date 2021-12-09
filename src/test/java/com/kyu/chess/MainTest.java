@@ -1,7 +1,9 @@
-package net.honux.chess;
+package com.kyu.chess;
 
-import org.junit.jupiter.api.*;
-import static org.assertj.core.api.Assertions.*;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 @DisplayName("기본 테스트")
 class MainTest {
