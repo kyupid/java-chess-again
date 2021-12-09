@@ -8,12 +8,14 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 class PawnTest {
 
     @Test
-    @DisplayName("흰색 폰과 검은색 폰이 생성되어져야 한다")
+    @DisplayName("원하는 색상으로 폰을 만든다.")
     void create() {
-        Pawn whitePawn = new Pawn("white");
-        Pawn blackPawn = new Pawn("black");
+        String color = "white";
+        Pawn pawn = new Pawn(color);
+        verify(pawn, color);
+    }
 
-        assertThat(whitePawn.getColor()).isEqualTo("white");
-        assertThat(blackPawn.getColor()).isEqualTo("black");
+    void verify(Pawn pawn, String color) {
+        assertThat(pawn.getColor()).isEqualTo(color);
     }
 }
