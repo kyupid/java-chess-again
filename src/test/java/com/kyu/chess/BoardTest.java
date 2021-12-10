@@ -1,5 +1,6 @@
 package com.kyu.chess;
 
+import com.kyu.chess.pieces.Pawn;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

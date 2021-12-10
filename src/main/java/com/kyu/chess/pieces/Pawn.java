@@ -1,4 +1,4 @@
-package com.kyu.chess;
+package com.kyu.chess.pieces;
 
 public class Pawn {
     private String color;

@@ -1,5 +1,7 @@
 package com.kyu.chess;
 
+import com.kyu.chess.pieces.Pawn;
+
 import java.util.ArrayList;
 import java.util.List;
 

@@ -1,5 +1,6 @@
-package com.kyu.chess;
+package com.kyu.chess.pieces;
 
+import com.kyu.chess.PieceColor;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
