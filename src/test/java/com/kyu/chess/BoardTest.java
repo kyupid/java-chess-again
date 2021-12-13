@@ -22,4 +22,11 @@ class BoardTest {
         assertThat(board.size()).isEqualTo(2);
         assertThat(board.findPawn(1)).isEqualTo(blackPawn);
     }
+
+    @Test
+    @DisplayName("생성된 폰들을 콘솔로 출력하여 의도된 모양인지 확인한다.")
+    void initialize() {
+        Board board = new Board();
+        board.initialize();
+    }
 }
