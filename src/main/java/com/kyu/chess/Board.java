@@ -2,25 +2,9 @@ package com.kyu.chess;
 
 import com.kyu.chess.pieces.Pawn;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Board {
-    private List<Pawn> pawns = new ArrayList<>();
     private final String blank = ".";
     private String[][] map = new String[8][8];
-
-    public void addPawn(Pawn pawn) {
-        pawns.add(pawn);
-    }
-
-    public int size() {
-        return pawns.size();
-    }
-
-    public Pawn findPawn(int index) {
-        return pawns.get(index);
-    }
 
     public void initialize() {
         final int WHITE_PAWNS_LINE_NUMBER = 1;
