@@ -39,9 +39,9 @@ public class Board {
     }
 
     public void printCurrentBoard() {
-        for (int i = 0; i < map.length; i++) {
-            for (int j = 0; j < map.length; j++) {
-                System.out.print(map[i][j]);
+        for (String[] strings : map) {
+            for (String str : strings) {
+                System.out.print(str);
             }
             System.out.println();
         }
