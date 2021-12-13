@@ -12,8 +12,7 @@ class PawnTest {
     @DisplayName("Color와 Representation이 null인 기본생성자를 확인한다.")
     void createWithNoColorNoRepresentation() {
         Pawn pawn = new Pawn();
-        assertThat(pawn.getColor()).isEqualTo(null);
-        assertThat(pawn.getRepresentation()).isEqualTo(null);
+        verify(pawn, pawn.getColor(), null);
     }
 
     @Test
