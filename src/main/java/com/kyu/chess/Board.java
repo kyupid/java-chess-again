@@ -26,9 +26,9 @@ public class Board {
     }
 
     public void printCurrentBoard() {
-        for (String[] strings : map) {
-            for (String str : strings) {
-                System.out.print(str);
+        for (String[] pieces : map) {
+            for (String piece : pieces) {
+                System.out.print(piece);
             }
             System.out.println();
         }
