@@ -1,10 +1,11 @@
 package com.kyu.chess.pieces;
 
 public class Pawn {
-    private final char WHITE_REPRESENTATION = 'p';
-    private final char BLACK_REPRESENTATION = 'P';
+    public static final char WHITE_REPRESENTATION = 'p';
+    public static final char BLACK_REPRESENTATION = 'P';
 
     private String color;
+    private char representation;
 
     public Pawn() {
     }
@@ -15,5 +16,9 @@ public class Pawn {
 
     public String getColor() {
         return color;
+    }
+
+    public char getRepresentation() {
+        return representation;
     }
 }
