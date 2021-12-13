@@ -9,7 +9,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 class PawnTest {
 
     @Test
-    @DisplayName("색이 없는 폰을 만든다.")
+    @DisplayName("Color와 Representation이 null인 기본생성자를 확인한다.")
     void createWithNoColorNoRepresentation() {
         Pawn pawn = new Pawn();
         assertThat(pawn.getColor()).isEqualTo(null);
