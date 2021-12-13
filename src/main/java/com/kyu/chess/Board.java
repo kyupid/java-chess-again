@@ -34,4 +34,7 @@ public class Board {
         }
     }
 
+    public String[][] getMap() {
+        return map;
+    }
 }
