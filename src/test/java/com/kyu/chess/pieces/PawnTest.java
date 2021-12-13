@@ -20,12 +20,12 @@ class PawnTest {
     @DisplayName("원하는 색상으로 폰을 만든다.")
     void createWithColor() {
         String color = PieceColor.WHITE.getColor();
-        char representation = Pawn.WHITE_REPRESENTATION;
+        String representation = Pawn.WHITE_REPRESENTATION;
         Pawn pawn = new Pawn(color, representation);
         verify(pawn, color, representation);
     }
 
-    void verify(Pawn pawn, String color, Character representation) {
+    void verify(Pawn pawn, String color, String representation) {
         assertThat(pawn.getColor()).isEqualTo(color);
         assertThat(pawn.getRepresentation()).isEqualTo(representation);
     }
