@@ -23,13 +23,16 @@ public class Board {
     }
 
     public void initialize() {
+        final int WHITE_PAWNS_LINE_NUMBER = 1;
+        final int BLACK_PAWNS_LINE_NUMBER = 6;
+
         for (int i = 0; i < map.length; i++) {
             for (int j = 0; j < map.length; j++) {
                 map[i][j] = blank;
-                if (i == 1) {
+                if (i == WHITE_PAWNS_LINE_NUMBER) {
                     map[i][j] = new Pawn(PieceColor.WHITE.getColor(), Pawn.WHITE_REPRESENTATION).getRepresentation();
                 }
-                if (i == 6) {
+                if (i == BLACK_PAWNS_LINE_NUMBER) {
                     map[i][j] = new Pawn(PieceColor.BLACK.getColor(), Pawn.BLACK_REPRESENTATION).getRepresentation();
                 }
                 System.out.print(map[i][j]);
