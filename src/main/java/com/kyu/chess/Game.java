@@ -7,7 +7,7 @@ public class Game {
 
     public void start() {
         System.out.println("start? y or n");
-        while (selectedCommandToStartGame()) {
+        while (isYesToStartGame()) {
             Board board = new Board();
             board.initialize();
             System.out.println("start? y or n");
@@ -16,7 +16,7 @@ public class Game {
         System.exit(1);
     }
 
-    private boolean selectedCommandToStartGame() {
+    private boolean isYesToStartGame() {
         return scanner.next().equals("y");
     }
 }
