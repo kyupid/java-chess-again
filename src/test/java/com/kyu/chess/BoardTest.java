@@ -8,18 +8,19 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 class BoardTest {
     @Test
-    @DisplayName("하얀색,검은색 폰을 생성해서 보드에 추가한뒤 잘들어간지 확인한다.")
-    void create() {
+    @DisplayName("생성된 폰들을 콘솔로 출력하여 기대한 representation 값이 나오는지 확인한다.")
+    void initialize() {
+        final int WHITE_PAWNS_LINE_NUMBER = 1;
+        final int BLACK_PAWNS_LINE_NUMBER = 6;
+
         Board board = new Board();
+        board.initialize();
 
-        Pawn whitePawn = new Pawn(PieceColor.WHITE.getColor());
-        board.addPawn(whitePawn);
-        assertThat(board.size()).isEqualTo(1);
-        assertThat(board.findPawn(0)).isEqualTo(whitePawn);
+        String[][] map = board.getMap();
 
-        Pawn blackPawn = new Pawn(PieceColor.BLACK.getColor());
-        board.addPawn(blackPawn);
-        assertThat(board.size()).isEqualTo(2);
-        assertThat(board.findPawn(1)).isEqualTo(blackPawn);
+        for (int i = 0; i < map.length; i++ ) {
+            assertThat(map[WHITE_PAWNS_LINE_NUMBER][i]).isEqualTo(Pawn.WHITE_REPRESENTATION);
+            assertThat(map[BLACK_PAWNS_LINE_NUMBER][i]).isEqualTo(Pawn.BLACK_REPRESENTATION);
+        }
     }
 }
