@@ -7,13 +7,13 @@ public class Game {
 
     public void start() {
         System.out.println("start? y or n");
-        while (isYesToStartGame()) {
-            Board board = new Board();
-            board.initialize();
-            System.out.println("start? y or n");
-            // TODO: 체스말 액션
+        if (!isYesToStartGame()) {
+            System.exit(1);
         }
-        System.exit(1);
+        Board board = new Board();
+        board.initialize();
+        System.out.println("start? y or n");
+        // TODO: 체스말 액션
     }
 
     private boolean isYesToStartGame() {
