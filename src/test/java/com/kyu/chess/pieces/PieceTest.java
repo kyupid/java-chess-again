@@ -42,4 +42,13 @@ class PieceTest {
     void verify(Piece pawn, PieceStatus pieceStatus) {
         assertThat(pawn.getPieceStatus()).isEqualTo(pieceStatus);
     }
+
+    @Test
+    @DisplayName("검은색말,흰말을 구분하는 메소드를 확인한다.")
+    void whiteOrBlack() {
+        Piece whitePawn = new Piece(PieceStatus.WHITE_PAWN);
+        Piece blackPawn = new Piece(PieceStatus.BLACK_PAWN);
+        assertThat(whitePawn.isWhite()).isTrue();
+        assertThat(blackPawn.isBlack()).isTrue();
+    }
 }
