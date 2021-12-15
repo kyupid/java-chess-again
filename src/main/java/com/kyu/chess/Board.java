@@ -1,6 +1,7 @@
 package com.kyu.chess;
 
-import com.kyu.chess.pieces.Pawn;
+import com.kyu.chess.pieces.Piece;
+import com.kyu.chess.pieces.PieceStatus;
 
 public class Board {
 
@@ -34,10 +35,14 @@ public class Board {
         for (int j = 0; j < map.length; j++) {
             map[i][j] = BLANK;
             if (i == WHITE_PAWNS_LINE_NUMBER) {
-                map[i][j] = new Pawn(PieceColor.WHITE.getColor(), Pawn.WHITE_REPRESENTATION).getRepresentation();
+                map[i][j] = new Piece(PieceStatus.WHITE_PAWN)
+                        .getPieceStatus()
+                        .getRepresentation();
             }
             if (i == BLACK_PAWNS_LINE_NUMBER) {
-                map[i][j] = new Pawn(PieceColor.BLACK.getColor(), Pawn.BLACK_REPRESENTATION).getRepresentation();
+                map[i][j] = new Piece(PieceStatus.BLACK_PAWN)
+                        .getPieceStatus()
+                        .getRepresentation();
             }
             System.out.print(map[i][j]);
         }

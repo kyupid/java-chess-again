@@ -1,6 +1,6 @@
 package com.kyu.chess;
 
-import com.kyu.chess.pieces.Pawn;
+import com.kyu.chess.pieces.PieceStatus;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -19,8 +19,8 @@ class BoardTest {
         String[][] map = board.getMap();
 
         for (int i = 0; i < map.length; i++ ) {
-            assertThat(map[WHITE_PAWNS_LINE_NUMBER][i]).isEqualTo(Pawn.WHITE_REPRESENTATION);
-            assertThat(map[BLACK_PAWNS_LINE_NUMBER][i]).isEqualTo(Pawn.BLACK_REPRESENTATION);
+            assertThat(map[WHITE_PAWNS_LINE_NUMBER][i]).isEqualTo(PieceStatus.WHITE_PAWN.getRepresentation());
+            assertThat(map[BLACK_PAWNS_LINE_NUMBER][i]).isEqualTo(PieceStatus.BLACK_PAWN.getRepresentation());
         }
     }
 }
