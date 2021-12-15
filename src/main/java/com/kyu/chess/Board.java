@@ -1,7 +1,6 @@
 package com.kyu.chess;
 
 import com.kyu.chess.piece.Piece;
-import com.kyu.chess.piece.PieceStatus;
 
 public class Board {
 
@@ -40,14 +39,10 @@ public class Board {
                 map[i][j] = placeWhitePieces(j);
             }
             if (i == WHITE_PAWNS_LINE_NUMBER) {
-                map[i][j] = new Piece(PieceStatus.WHITE_PAWN)
-                        .getPieceStatus()
-                        .getRepresentation();
+                map[i][j] = new Piece(Piece.Color.WHITE, Piece.Type.PAWN).getType().getRepresentation();
             }
             if (i == BLACK_PAWNS_LINE_NUMBER) {
-                map[i][j] = new Piece(PieceStatus.BLACK_PAWN)
-                        .getPieceStatus()
-                        .getRepresentation();
+                map[i][j] = new Piece(Piece.Color.BLACK, Piece.Type.PAWN).getType().getRepresentation().toUpperCase();
             }
             if (i == BLACK_PIECES_LINE_NUMBER) {
                 map[i][j] = placeBlackPieces(j);
@@ -60,42 +55,42 @@ public class Board {
         switch (j) {
             case 0:
             case 7:
-                return new Piece(PieceStatus.WHITE_ROOK).getPieceStatus().getRepresentation();
+                return new Piece(Piece.Color.WHITE, Piece.Type.ROOK).getType().getRepresentation();
             case 1:
             case 6:
-                return new Piece(PieceStatus.WHITE_KNIGHT).getPieceStatus().getRepresentation();
+                return new Piece(Piece.Color.WHITE, Piece.Type.KNIGHT).getType().getRepresentation();
             case 2:
             case 5:
-                return new Piece(PieceStatus.WHITE_BISHOP).getPieceStatus().getRepresentation();
+                return new Piece(Piece.Color.WHITE, Piece.Type.BISHOP).getType().getRepresentation();
             case 3:
-                return new Piece(PieceStatus.WHITE_QUEEN).getPieceStatus().getRepresentation();
+                return new Piece(Piece.Color.WHITE, Piece.Type.QUEEN).getType().getRepresentation();
             case 4:
-                return new Piece(PieceStatus.WHITE_KING).getPieceStatus().getRepresentation();
+                return new Piece(Piece.Color.WHITE, Piece.Type.KING).getType().getRepresentation();
             default:
                 break;
         }
-        return new Piece().getPieceStatus().getRepresentation();
+        return new Piece(Piece.Color.WHITE, Piece.Type.PAWN).getType().getRepresentation();
     }
 
     private String placeBlackPieces(int j) {
         switch (j) {
             case 0:
             case 7:
-                return new Piece(PieceStatus.BLACK_ROOK).getPieceStatus().getRepresentation();
+                return new Piece(Piece.Color.BLACK, Piece.Type.ROOK).getType().getRepresentation().toUpperCase();
             case 1:
             case 6:
-                return new Piece(PieceStatus.BLACK_KNIGHT).getPieceStatus().getRepresentation();
+                return new Piece(Piece.Color.BLACK, Piece.Type.KNIGHT).getType().getRepresentation().toUpperCase();
             case 2:
             case 5:
-                return new Piece(PieceStatus.BLACK_BISHOP).getPieceStatus().getRepresentation();
+                return new Piece(Piece.Color.BLACK, Piece.Type.BISHOP).getType().getRepresentation().toUpperCase();
             case 3:
-                return new Piece(PieceStatus.BLACK_QUEEN).getPieceStatus().getRepresentation();
+                return new Piece(Piece.Color.BLACK, Piece.Type.QUEEN).getType().getRepresentation().toUpperCase();
             case 4:
-                return new Piece(PieceStatus.BLACK_KING).getPieceStatus().getRepresentation();
+                return new Piece(Piece.Color.BLACK, Piece.Type.KING).getType().getRepresentation().toUpperCase();
             default:
                 break;
         }
-        return new Piece().getPieceStatus().getRepresentation();
+        return new Piece(Piece.Color.BLACK, Piece.Type.PAWN).getType().getRepresentation().toUpperCase();
     }
 
     public String[][] getMap() {

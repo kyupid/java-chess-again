@@ -2,50 +2,50 @@ package com.kyu.chess.piece;
 
 public class PieceFactory {
     public static Piece createWhitePawn() {
-        return new Piece(PieceStatus.WHITE_PAWN);
+        return new Piece(Piece.Color.WHITE, Piece.Type.PAWN);
     }
 
     public static Piece createBlackPawn() {
-        return new Piece(PieceStatus.BLACK_PAWN);
+        return new Piece(Piece.Color.BLACK, Piece.Type.PAWN);
     }
 
     public static Piece createWhiteKing() {
-        return new Piece(PieceStatus.WHITE_KING);
+        return new Piece(Piece.Color.WHITE, Piece.Type.KING);
     }
 
     public static Piece createBlackKing() {
-        return new Piece(PieceStatus.BLACK_KING);
+        return new Piece(Piece.Color.BLACK, Piece.Type.KING);
     }
 
     public static Piece createWhiteQueen() {
-        return new Piece(PieceStatus.WHITE_QUEEN);
+        return new Piece(Piece.Color.WHITE, Piece.Type.QUEEN);
     }
 
     public static Piece createBlackQueen() {
-        return new Piece(PieceStatus.BLACK_QUEEN);
+        return new Piece(Piece.Color.BLACK, Piece.Type.QUEEN);
     }
 
     public static Piece createWhiteBishop() {
-        return new Piece(PieceStatus.WHITE_BISHOP);
+        return new Piece(Piece.Color.WHITE, Piece.Type.BISHOP);
     }
 
     public static Piece createBlackBishop() {
-        return new Piece(PieceStatus.BLACK_BISHOP);
+        return new Piece(Piece.Color.BLACK, Piece.Type.BISHOP);
     }
 
     public static Piece createWhiteKnight() {
-        return new Piece(PieceStatus.WHITE_KNIGHT);
+        return new Piece(Piece.Color.WHITE, Piece.Type.KNIGHT);
     }
 
     public static Piece createBlackKnight() {
-        return new Piece(PieceStatus.BLACK_KNIGHT);
+        return new Piece(Piece.Color.BLACK, Piece.Type.KNIGHT);
     }
 
     public static Piece createWhiteRook() {
-        return new Piece(PieceStatus.WHITE_ROOK);
+        return new Piece(Piece.Color.WHITE, Piece.Type.ROOK);
     }
 
     public static Piece createBlackRook() {
-        return new Piece(PieceStatus.BLACK_ROOK);
+        return new Piece(Piece.Color.BLACK, Piece.Type.ROOK);
     }
 }

@@ -1,8 +1,10 @@
 package com.kyu.chess;
 
-import com.kyu.chess.piece.PieceStatus;
+import com.kyu.chess.piece.Piece;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+
+import java.util.Locale;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
@@ -27,8 +29,8 @@ class BoardTest {
         for (int i = 0; i < map.length; i++) {
             whitePiecesRepresentation.append(map[WHITE_PIECES_LINE_NUMBER][i]);
             blackPiecesRepresentation.append(map[BLACK_PIECES_LINE_NUMBER][i]);
-            assertThat(map[WHITE_PAWNS_LINE_NUMBER][i]).isEqualTo(PieceStatus.WHITE_PAWN.getRepresentation());
-            assertThat(map[BLACK_PAWNS_LINE_NUMBER][i]).isEqualTo(PieceStatus.BLACK_PAWN.getRepresentation());
+            assertThat(map[WHITE_PAWNS_LINE_NUMBER][i]).isEqualTo(Piece.Type.PAWN.getRepresentation());
+            assertThat(map[BLACK_PAWNS_LINE_NUMBER][i]).isEqualTo(Piece.Type.PAWN.getRepresentation().toUpperCase());
         }
         assertThat(WHITE_PIECES_REPRESENTATION).isEqualTo(whitePiecesRepresentation.toString());
         assertThat(BLACK_PIECES_REPRESENTATION).isEqualTo(blackPiecesRepresentation.toString());
