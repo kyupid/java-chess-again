@@ -8,7 +8,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 class BoardTest {
     @Test
-    @DisplayName("생성된 폰들을 콘솔로 출력하여 기대한 representation 값이 나오는지 확인한다.")
+    @DisplayName("생성된 체스말들을 콘솔로 출력하여 기대한 representation 값이 나오는지 확인한다.")
     void initialize() {
         final int WHITE_PIECES_LINE_NUMBER = 0;
         final int WHITE_PAWNS_LINE_NUMBER = 1;
