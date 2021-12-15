@@ -1,5 +1,7 @@
 package com.kyu.chess.pieces;
 
+import java.util.Objects;
+
 public class Piece {
     private PieceStatus pieceStatus;
 
@@ -12,5 +14,13 @@ public class Piece {
 
     public PieceStatus getPieceStatus() {
         return pieceStatus;
+    }
+
+    public boolean isWhite(String color) {
+        return color.equals("white");
+    }
+
+    public boolean isBlack(String color) {
+        return color.equals("black");
     }
 }
