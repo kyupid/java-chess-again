@@ -48,7 +48,7 @@ class PieceTest {
     void whiteOrBlack() {
         Piece whitePawn = new Piece(PieceStatus.WHITE_PAWN);
         Piece blackPawn = new Piece(PieceStatus.BLACK_PAWN);
-        assertThat(whitePawn.isWhite()).isTrue();
-        assertThat(blackPawn.isBlack()).isTrue();
+        assertThat(whitePawn.isWhite(PieceStatus.WHITE_PAWN.getColor())).isTrue();
+        assertThat(blackPawn.isBlack(PieceStatus.BLACK_PAWN.getColor())).isTrue();
     }
 }
