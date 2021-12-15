@@ -1,4 +1,4 @@
-package com.kyu.chess.pieces;
+package com.kyu.chess.piece;
 
 public enum PieceStatus {
     WHITE_KING("k", "white"),

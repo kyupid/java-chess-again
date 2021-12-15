@@ -1,6 +1,6 @@
 package com.kyu.chess;
 
-import com.kyu.chess.pieces.PieceStatus;
+import com.kyu.chess.piece.PieceStatus;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

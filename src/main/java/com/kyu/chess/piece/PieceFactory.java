@@ -1,4 +1,4 @@
-package com.kyu.chess.pieces;
+package com.kyu.chess.piece;
 
 public class PieceFactory {
     public static Piece createWhitePawn() {

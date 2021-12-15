@@ -1,7 +1,7 @@
 package com.kyu.chess;
 
-import com.kyu.chess.pieces.Piece;
-import com.kyu.chess.pieces.PieceStatus;
+import com.kyu.chess.piece.Piece;
+import com.kyu.chess.piece.PieceStatus;
 
 public class Board {
 
