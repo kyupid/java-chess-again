@@ -24,7 +24,7 @@ class PieceTest {
 
     @Test
     @DisplayName("PieceFactory로 생성한 모든 Piece들에 대해 확인을 한다.")
-    public void create_piece() {
+    void createPieces() {
         verify(PieceFactory.createWhitePawn(), PieceStatus.WHITE_PAWN);
         verify(PieceFactory.createBlackPawn(), PieceStatus.BLACK_PAWN);
         verify(PieceFactory.createWhiteKing(), PieceStatus.WHITE_KING);
