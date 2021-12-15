@@ -17,18 +17,18 @@ class PieceTest {
     @Test
     @DisplayName("PieceFactory로 생성한 모든 Piece들에 대해 확인을 한다.")
     void createPieces() {
-        verify(PieceFactory.createWhitePawn(), Piece.Color.WHITE, Piece.Type.PAWN);
-        verify(PieceFactory.createBlackPawn(), Piece.Color.BLACK, Piece.Type.PAWN);
-        verify(PieceFactory.createWhiteKing(), Piece.Color.WHITE, Piece.Type.KING);
-        verify(PieceFactory.createBlackKing(), Piece.Color.BLACK, Piece.Type.KING);
-        verify(PieceFactory.createWhiteQueen(), Piece.Color.WHITE, Piece.Type.QUEEN);
-        verify(PieceFactory.createBlackQueen(), Piece.Color.BLACK, Piece.Type.QUEEN);
-        verify(PieceFactory.createWhiteBishop(), Piece.Color.WHITE, Piece.Type.BISHOP);
-        verify(PieceFactory.createBlackBishop(), Piece.Color.BLACK, Piece.Type.BISHOP);
-        verify(PieceFactory.createWhiteKnight(), Piece.Color.WHITE, Piece.Type.KNIGHT);
-        verify(PieceFactory.createBlackKnight(), Piece.Color.BLACK, Piece.Type.KNIGHT);
-        verify(PieceFactory.createWhiteRook(), Piece.Color.WHITE, Piece.Type.ROOK);
-        verify(PieceFactory.createBlackRook(), Piece.Color.BLACK, Piece.Type.ROOK);
+        verify(PieceFactory.createWhite(Piece.Type.PAWN), Piece.Color.WHITE, Piece.Type.PAWN);
+        verify(PieceFactory.createBlack(Piece.Type.PAWN), Piece.Color.BLACK, Piece.Type.PAWN);
+        verify(PieceFactory.createWhite(Piece.Type.KING), Piece.Color.WHITE, Piece.Type.KING);
+        verify(PieceFactory.createBlack(Piece.Type.KING), Piece.Color.BLACK, Piece.Type.KING);
+        verify(PieceFactory.createWhite(Piece.Type.QUEEN), Piece.Color.WHITE, Piece.Type.QUEEN);
+        verify(PieceFactory.createBlack(Piece.Type.QUEEN), Piece.Color.BLACK, Piece.Type.QUEEN);
+        verify(PieceFactory.createWhite(Piece.Type.BISHOP), Piece.Color.WHITE, Piece.Type.BISHOP);
+        verify(PieceFactory.createBlack(Piece.Type.BISHOP), Piece.Color.BLACK, Piece.Type.BISHOP);
+        verify(PieceFactory.createWhite(Piece.Type.KNIGHT), Piece.Color.WHITE, Piece.Type.KNIGHT);
+        verify(PieceFactory.createBlack(Piece.Type.KNIGHT), Piece.Color.BLACK, Piece.Type.KNIGHT);
+        verify(PieceFactory.createWhite(Piece.Type.ROOK), Piece.Color.WHITE, Piece.Type.ROOK);
+        verify(PieceFactory.createBlack(Piece.Type.ROOK), Piece.Color.BLACK, Piece.Type.ROOK);
 
         verify(PieceFactory.createBlank(), Piece.Color.NO_COLOR, Piece.Type.NO_PIECE);
     }
