@@ -22,6 +22,23 @@ class PieceTest {
         verify(pawn, pawnStatus);
     }
 
+    @Test
+    @DisplayName("PieceFactory로 생성한 모든 Piece들에 대해 확인을 한다.")
+    public void create_piece() {
+        verify(PieceFactory.createWhitePawn(), PieceStatus.WHITE_PAWN);
+        verify(PieceFactory.createBlackPawn(), PieceStatus.BLACK_PAWN);
+        verify(PieceFactory.createWhiteKing(), PieceStatus.WHITE_KING);
+        verify(PieceFactory.createBlackKing(), PieceStatus.BLACK_KING);
+        verify(PieceFactory.createWhiteQueen(), PieceStatus.WHITE_QUEEN);
+        verify(PieceFactory.createBlackQueen(), PieceStatus.BLACK_QUEEN);
+        verify(PieceFactory.createWhiteBishop(), PieceStatus.WHITE_BISHOP);
+        verify(PieceFactory.createBlackBishop(), PieceStatus.BLACK_BISHOP);
+        verify(PieceFactory.createWhiteKnight(), PieceStatus.WHITE_KNIGHT);
+        verify(PieceFactory.createBlackKnight(), PieceStatus.BLACK_KNIGHT);
+        verify(PieceFactory.createWhiteRook(), PieceStatus.WHITE_ROOK);
+        verify(PieceFactory.createBlackRook(), PieceStatus.BLACK_ROOK);
+    }
+
     void verify(Piece pawn, PieceStatus pieceStatus) {
         assertThat(pawn.getPieceStatus()).isEqualTo(pieceStatus);
     }
