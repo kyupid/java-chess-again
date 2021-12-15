@@ -1,7 +1,5 @@
 package com.kyu.chess.pieces;
 
-import java.util.Objects;
-
 public class Piece {
     private PieceStatus pieceStatus;
 
