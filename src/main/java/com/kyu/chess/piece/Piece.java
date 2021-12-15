@@ -26,7 +26,7 @@ public class Piece {
     }
 
     public enum Color {
-        WHITE("white"), BLACK("black"), NO_COLOR("no");
+        WHITE("white"), BLACK("black"), NO_COLOR(".");
 
         private String color;
 
@@ -40,7 +40,7 @@ public class Piece {
     }
 
     public enum Type {
-        PAWN("p"), ROOK("r"), KNIGHT("n"), BISHOP("b"), QUEEN("q"), KING("k"), NO_PIECE("no");
+        PAWN("p"), ROOK("r"), KNIGHT("n"), BISHOP("b"), QUEEN("q"), KING("k"), NO_PIECE(".");
 
         private String representation;
 

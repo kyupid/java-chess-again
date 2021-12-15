@@ -31,10 +31,9 @@ public class Board {
         final int WHITE_PAWNS_LINE_NUMBER = 1;
         final int BLACK_PAWNS_LINE_NUMBER = 6;
         final int BLACK_PIECES_LINE_NUMBER = 7;
-        final String BLANK = ".";
 
         for (int j = 0; j < map.length; j++) {
-            map[i][j] = BLANK;
+            map[i][j] = new Piece(Piece.Color.NO_COLOR, Piece.Type.NO_PIECE).getType().getRepresentation();
             if (i == WHITE_PIECES_LINE_NUMBER) {
                 map[i][j] = placeWhitePieces(j);
             }
