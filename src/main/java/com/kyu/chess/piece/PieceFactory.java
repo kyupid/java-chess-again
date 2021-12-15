@@ -48,4 +48,8 @@ public class PieceFactory {
     public static Piece createBlackRook() {
         return new Piece(Piece.Color.BLACK, Piece.Type.ROOK);
     }
+
+    public static Piece createBlank() {
+        return new Piece(Piece.Color.NO_COLOR, Piece.Type.NO_PIECE);
+    }
 }

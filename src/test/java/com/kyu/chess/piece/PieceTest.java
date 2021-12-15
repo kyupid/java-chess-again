@@ -29,6 +29,8 @@ class PieceTest {
         verify(PieceFactory.createBlackKnight(), Piece.Color.BLACK, Piece.Type.KNIGHT);
         verify(PieceFactory.createWhiteRook(), Piece.Color.WHITE, Piece.Type.ROOK);
         verify(PieceFactory.createBlackRook(), Piece.Color.BLACK, Piece.Type.ROOK);
+
+        verify(PieceFactory.createBlank(), Piece.Color.NO_COLOR, Piece.Type.NO_PIECE);
     }
 
     void verify(Piece pawn, Piece.Color color, Piece.Type type) {
