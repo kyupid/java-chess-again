@@ -35,4 +35,17 @@ class BoardTest {
         assertThat(whitePiecesRepresentation.toString()).isEqualTo(WHITE_PIECES_REPRESENTATION);
         assertThat(blackPiecesRepresentation.toString()).isEqualTo(BLACK_PIECES_REPRESENTATION);
     }
+
+    @Test
+    @DisplayName("초기화된 보드의 검정색 폰의 갯수를 정확히 반환하는지 확인한다.")
+    void countBlackPawns() {
+        Board board = new Board();
+        board.initialize();
+
+        String blackPawnRepresentation = new Piece(Piece.Color.BLACK, Piece.Type.PAWN).getType().getRepresentation();
+        int countOfBlackPawns = board.countOfCertainPiece(board.getMap(), blackPawnRepresentation);
+
+        assertThat(countOfBlackPawns).isEqualTo(8);
+    }
+
 }
