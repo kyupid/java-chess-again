@@ -12,7 +12,6 @@ public class Game {
         }
         Board board = new Board();
         board.initialize();
-        System.out.println("start? y or n");
         // TODO: 체스말 액션
     }
 
