@@ -32,7 +32,7 @@ class BoardTest {
             assertThat(map[WHITE_PAWNS_LINE_NUMBER][i]).isEqualTo(Piece.Type.PAWN.getRepresentation());
             assertThat(map[BLACK_PAWNS_LINE_NUMBER][i]).isEqualTo(Piece.Type.PAWN.getRepresentation().toUpperCase());
         }
-        assertThat(WHITE_PIECES_REPRESENTATION).isEqualTo(whitePiecesRepresentation.toString());
-        assertThat(BLACK_PIECES_REPRESENTATION).isEqualTo(blackPiecesRepresentation.toString());
+        assertThat(whitePiecesRepresentation.toString()).isEqualTo(WHITE_PIECES_REPRESENTATION);
+        assertThat(blackPiecesRepresentation.toString()).isEqualTo(BLACK_PIECES_REPRESENTATION);
     }
 }
