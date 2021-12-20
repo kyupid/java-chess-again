@@ -1,6 +1,7 @@
 package com.kyu.chess;
 
 import com.kyu.chess.piece.Piece;
+import com.kyu.chess.piece.PieceFactory;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -48,4 +49,15 @@ class BoardTest {
         assertThat(countOfBlackPawns).isEqualTo(8);
     }
 
+    @Test
+    @DisplayName("특정 위치의 체스말을 반환하는 것을 확인한다.")
+    void findPiece() {
+        Board board = new Board();
+        board.initialize();
+
+        assertThat(board.findPiece("a8")).isEqualTo(PieceFactory.createWhite(Piece.Type.ROOK));
+        assertThat(board.findPiece("h8")).isEqualTo(PieceFactory.createWhite(Piece.Type.ROOK));
+        assertThat(board.findPiece("a1")).isEqualTo(PieceFactory.createBlack(Piece.Type.ROOK));
+        assertThat(board.findPiece("h1")).isEqualTo(PieceFactory.createBlack(Piece.Type.ROOK));
+    }
 }
