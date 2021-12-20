@@ -5,6 +5,7 @@ import com.kyu.chess.piece.Piece;
 public class Board {
 
     private String[][] map = new String[8][8];
+    private final String[][] POSITION = new Position().getPosition();
 
     public void initialize() {
         divideRow();
