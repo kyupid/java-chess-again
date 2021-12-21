@@ -23,15 +23,15 @@ class BoardTest {
         Board board = new Board();
         board.initialize();
 
-        String[][] map = board.getMap();
+        Piece[][] map = board.getMap();
 
         StringBuilder whitePiecesRepresentation = new StringBuilder();
         StringBuilder blackPiecesRepresentation = new StringBuilder();
         for (int i = 0; i < map.length; i++) {
-            whitePiecesRepresentation.append(map[WHITE_PIECES_LINE_NUMBER][i]);
-            blackPiecesRepresentation.append(map[BLACK_PIECES_LINE_NUMBER][i]);
-            assertThat(map[WHITE_PAWNS_LINE_NUMBER][i]).isEqualTo(Piece.Type.PAWN.getRepresentation());
-            assertThat(map[BLACK_PAWNS_LINE_NUMBER][i]).isEqualTo(Piece.Type.PAWN.getRepresentation().toUpperCase());
+            whitePiecesRepresentation.append(map[WHITE_PIECES_LINE_NUMBER][i].getType().getRepresentation());
+            blackPiecesRepresentation.append(map[BLACK_PIECES_LINE_NUMBER][i].getType().getRepresentation().toUpperCase());
+            assertThat(map[WHITE_PAWNS_LINE_NUMBER][i].equals(new Piece(Piece.Color.WHITE, Piece.Type.PAWN))).isTrue();
+            assertThat(map[BLACK_PAWNS_LINE_NUMBER][i].equals(new Piece(Piece.Color.BLACK, Piece.Type.PAWN))).isTrue();
         }
         assertThat(whitePiecesRepresentation.toString()).isEqualTo(WHITE_PIECES_REPRESENTATION);
         assertThat(blackPiecesRepresentation.toString()).isEqualTo(BLACK_PIECES_REPRESENTATION);

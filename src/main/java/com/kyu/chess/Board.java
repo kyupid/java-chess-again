@@ -97,7 +97,7 @@ public class Board {
         return map;
     }
 
-    public int countOfCertainPiece(String[][] map, String representation) {
+    public int countOfCertainPiece(Piece[][] map, String representation) {
         int count = 0;
         for (int i = 0; i < map.length; i++) {
             for (int j = 0; j < map.length; j++) {
