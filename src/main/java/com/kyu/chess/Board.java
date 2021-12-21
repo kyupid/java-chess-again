@@ -109,13 +109,20 @@ public class Board {
         return count;
     }
 
-    public int[] findMapIndexBy(String position) {
+    private int[] findMapIndexBy(String position) {
+        int[] index = new int[2];
         for (int i = 0; i < COORDINATE.length; i++) {
-            for (int j = 0; j < COORDINATE.length; j++) {
-                if (COORDINATE[i][j].equals(position)) {
-                    return new int[]{i, j};
-                }
+            index = getInts(position, i);
+        }
+        return index;
+    }
+
+    private int[] getInts(String position, int i) {
+        for (int j = 0; j < COORDINATE.length; j++) {
+            if (COORDINATE[i][j].equals(position)) {
+                return new int[]{i, j};
             }
         }
+        return null;
     }
 }
