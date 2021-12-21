@@ -17,12 +17,12 @@ public class Piece {
         return type;
     }
 
-    public boolean isWhite(String color) {
-        return color.equals("white");
+    public boolean isWhite() {
+        return color.getColor().equals("white");
     }
 
-    public boolean isBlack(String color) {
-        return color.equals("black");
+    public boolean isBlack() {
+        return color.getColor().equals("black");
     }
 
     public enum Color {
