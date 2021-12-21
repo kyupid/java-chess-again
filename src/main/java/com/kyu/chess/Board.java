@@ -9,21 +9,29 @@ public class Board {
 
     public void initialize() {
         divideRow();
+        printCurrentBoard();
     }
 
     public void printCurrentBoard() {
         for (Piece[] pieces : map) {
             for (Piece piece : pieces) {
-                System.out.print(piece.getType().getRepresentation());
+                printRepresentation(piece);
             }
             System.out.println();
+        }
+    }
+
+    private void printRepresentation(Piece piece) {
+        if (piece.isBlack()) {
+            System.out.print(piece.getType().getRepresentation().toUpperCase());
+        } else {
+            System.out.print(piece.getType().getRepresentation());
         }
     }
 
     private void divideRow() {
         for (int i = 0; i < map.length; i++) {
             placePawns(i);
-            System.out.println();
         }
     }
 
@@ -47,7 +55,6 @@ public class Board {
             if (i == BLACK_PIECES_LINE_NUMBER) {
                 map[i][j] = placeBlackPieces(j);
             }
-            System.out.print(map[i][j]);
         }
     }
 
@@ -101,7 +108,10 @@ public class Board {
         int count = 0;
         for (int i = 0; i < map.length; i++) {
             for (int j = 0; j < map.length; j++) {
-                if (map[i][j].equals(representation)) {
+                if (map[i][j].isBlack() && map[i][j].getType().getRepresentation().toUpperCase().equals(representation)) {
+                    count++;
+                }
+                if (map[i][j].isWhite() && map[i][j].getType().getRepresentation().equals(representation)) {
                     count++;
                 }
             }

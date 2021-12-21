@@ -43,7 +43,7 @@ class BoardTest {
         Board board = new Board();
         board.initialize();
 
-        String blackPawnRepresentation = new Piece(Piece.Color.BLACK, Piece.Type.PAWN).getType().getRepresentation();
+        String blackPawnRepresentation = new Piece(Piece.Color.BLACK, Piece.Type.PAWN).getType().getRepresentation().toUpperCase();
         int countOfBlackPawns = board.countOfCertainPiece(board.getMap(), blackPawnRepresentation);
 
         assertThat(countOfBlackPawns).isEqualTo(8);
