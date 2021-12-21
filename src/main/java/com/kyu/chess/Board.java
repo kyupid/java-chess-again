@@ -109,6 +109,11 @@ public class Board {
         return count;
     }
 
+    public Piece findPiece(String position) {
+        int[] mapIndex = findMapIndexBy(position);
+        return map[mapIndex[0]][mapIndex[1]];
+    }
+
     private int[] findMapIndexBy(String position) {
         int[] index = new int[2];
         for (int i = 0; i < COORDINATE.length; i++) {
