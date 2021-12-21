@@ -5,7 +5,7 @@ import com.kyu.chess.piece.Piece;
 public class Board {
 
     private String[][] map = new String[8][8];
-    private final String[][] POSITION = new Position().getPosition();
+    private final String[][] COORDINATE = new Position().getPosition();
 
     public void initialize() {
         divideRow();
@@ -107,5 +107,15 @@ public class Board {
             }
         }
         return count;
+    }
+
+    public int[] findMapIndexBy(String position) {
+        for (int i = 0; i < COORDINATE.length; i++) {
+            for (int j = 0; j < COORDINATE.length; j++) {
+                if (COORDINATE[i][j].equals(position)) {
+                    return new int[]{i, j};
+                }
+            }
+        }
     }
 }
