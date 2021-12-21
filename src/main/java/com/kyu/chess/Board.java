@@ -5,7 +5,7 @@ import com.kyu.chess.piece.Piece;
 public class Board {
 
     private String[][] map = new String[8][8];
-    private final String[][] COORDINATE = new Position().getPosition();
+    private final String[][] COORDINATE = new Coordinate().getCoordinate();
 
     public void initialize() {
         divideRow();

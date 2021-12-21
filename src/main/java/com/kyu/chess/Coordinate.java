@@ -1,23 +1,23 @@
 package com.kyu.chess;
 
-public class Position {
-    private final String[][] POSITION = new String[8][8];
+public class Coordinate {
+    private final String[][] COORDINATE = new String[8][8];
 
-    public Position() {
+    public Coordinate() {
         initialize();
     }
 
-    public String[][] getPosition() {
-        return POSITION;
+    public String[][] getCoordinate() {
+        return COORDINATE;
     }
 
     private void initialize() {
         int count = 8;
         char[] alphabet = printAlphabet();
-        for (int i = 0; i < POSITION.length; i++) {
+        for (int i = 0; i < COORDINATE.length; i++) {
             char columnName = alphabet[i];
-            for (int j = 0; j < POSITION.length; j++) {
-                POSITION[i][j] = String.valueOf(columnName + count);
+            for (int j = 0; j < COORDINATE.length; j++) {
+                COORDINATE[i][j] = String.valueOf(columnName + count);
             }
             count--;
         }
